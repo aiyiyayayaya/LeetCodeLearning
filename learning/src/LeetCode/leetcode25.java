@@ -1,3 +1,5 @@
+package LeetCode;
+
 /**
  * Created by aiya on 2019/7/15 上午10:25
  * 给一个链表，每K个一组翻转链表，K<=链表长度

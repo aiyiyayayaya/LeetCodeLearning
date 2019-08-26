@@ -6,7 +6,17 @@ package LeetCode;
  */
 public class MergeKList23 {
     public ListNode mergeKLists(ListNode[] lists) {
-        return null;
+        if (lists == null)
+            return null;
+        int n = lists.length;
+        while(n > 1){
+            int k = (n + 1) / 2;
+            for (int i = 0; i < n / 2; i++){
+                merge(lists[i], lists[i + k]);
+            }
+            n = k;
+        }
+        return lists[0];
     }
     //两两合并
     public ListNode merge(ListNode l1, ListNode l2){
